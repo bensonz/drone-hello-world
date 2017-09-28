@@ -1,17 +1,4 @@
 pipeline:
-  backend:
-    image: golang
-    commands:
-      - go get
-      - go build
-      - go test
-
-  frontend:
-    image: node:6
-    commands:
-      - npm install
-      - npm test
-
   publish:
     image: plugins/docker
     repo: octocat/hello-world
